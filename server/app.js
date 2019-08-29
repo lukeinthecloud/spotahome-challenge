@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
 const expressDomain = require('express-domain-middleware');
 const logger = require('morgan');
 const cors = require('cors');
@@ -20,7 +19,6 @@ const heartBeatRouter = require('./routes/heartbeat');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressDomain);
 
@@ -37,7 +35,9 @@ app.use(cors({
 		return callback(null, true);
 	}
 }));
-
+app.on('listening', function() {
+	console.log('hello world');
+});
 app.use('/', heartBeatRouter);
 app.use('/api', apiRouter);
 
