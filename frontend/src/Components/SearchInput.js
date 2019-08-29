@@ -20,9 +20,10 @@ export default function MarkerSearch(props) {
 
 	async function _getMarkersForLocation() {
 		const markersByIDResponse = await get({
-			url: `/markers/${marker}?limit=30`,
+			url: `/markers/${marker}`,
 			queryParams: {
-				returnID: true
+				returnID: true,
+				limit: 30
 			}
 		});
 

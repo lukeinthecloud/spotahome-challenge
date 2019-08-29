@@ -4,11 +4,10 @@ let axiosInstance = null;
 
 function initializeCommunicationInstance() {
 	const baseUrl = process.env.REACT_APP_BASE_URL;
-	console.log(baseUrl);
 	if (!axiosInstance) {
 		axiosInstance = axios.create({
 			baseURL: baseUrl,
-			timeout: 1000
+			timeout: 2000
 		});
 	}
 }

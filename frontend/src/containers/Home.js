@@ -25,7 +25,7 @@ export default function Home() {
 	}
 
 	function showAvailableRooms() {
-		if (homeCards) {
+		if (homeCards && homeCards.length !== 0) {
 			return (
 				<>
 					{
@@ -45,7 +45,7 @@ export default function Home() {
 
 		return (
 			<HomeSearchErrorMessage>
-				<h4>No available rooms for your selection please try a valid country</h4>
+				<h4>Please enter a valid country</h4>
 			</HomeSearchErrorMessage>
 		)
 	}
