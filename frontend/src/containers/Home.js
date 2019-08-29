@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+				<div className="col-sm-9 col-md-7 col-lg-12 mx-auto">
 					<HomeCard/>
 				</div>
 			</div>
