@@ -1,4 +1,4 @@
-function addIDsToEndpoint(ids) {
+function _addIDsToEndpoint(ids) {
 	let endpointIDs = '';
 
 	ids.forEach((id, index) => {
@@ -15,7 +15,7 @@ function addIDsToEndpoint(ids) {
 
 module.exports = function homeCardsHandler(req, res, next) {
 	const homeCardIDs = req.body.homecardIDs;
-	const endpointIDs =  addIDsToEndpoint(homeCardIDs);
+	const endpointIDs =  _addIDsToEndpoint(homeCardIDs);
 
 	req.locals = {
 		endpoint: `/homecards_ids?${endpointIDs}`
