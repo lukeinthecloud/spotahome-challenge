@@ -1,13 +1,11 @@
 const express = require('express');
 const path = require('path');
-const expressDomain = require('express-domain-middleware');
 const logger = require('morgan');
 const cors = require('cors');
 
 const {setupEnvironmentVariables} = require('./config/enviroment-setup');
 
 const errorMiddleware = require('./logic/middleware/error.middleware');
-const errorLoggerMiddleware = require('./logic/middleware/errors/error-logger.middleware');
 
 setupEnvironmentVariables();
 console.log(process.env.LISTING_ENDPOINT);
