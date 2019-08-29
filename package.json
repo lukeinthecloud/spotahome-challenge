@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "startServer": "SET NODE_ENV=production && cd ./server && node ./bin/www",
+    "startServerDevelopment": "SET NODE_ENV=development && cd ./server && node ./bin/www",
+    "startFrontend": "cd ./frontend && npm run start",
+    "start": "concurrently \"npm run startServer\" \"npm run startFrontend\"",
+    "dev": "concurrently \"npm run startServerDevelopment\" \"npm run startFrontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
