@@ -1,20 +1,24 @@
 import React                                   from 'react';
 import { CardContainer, ImageContainerStyled } from './styles/HomeCard.style';
 
-export default function HomeCard() {
+export default function HomeCard(props) {
+	const homeCard = props.homeCard;
+
 	return (
 		<CardContainer className="card">
 			<ImageContainerStyled>
-				<img src="https://en.bcdn.biz/Images/2018/6/12/27565ee3-ffc0-4a4d-af63-ce8731b65f26.jpg"
+				<img src={homeCard.mainPhotoUrl}
 				     className="img-fluid" alt=""/>
 			</ImageContainerStyled>
 			<div className="card-body">
 				<div className="d-flex justify-content-between">
 					<p className="card-text">
-						Some quick example text to build on the card title and make up the bulk of
-						the card's content.
+						{homeCard.title}
 					</p>
-					<h2>Price</h2>
+					<h2>
+						{homeCard.currencySymbol}
+						{homeCard.pricePerMonth}
+					</h2>
 				</div>
 
 				<div className="col d-flex justify-content-end">
