@@ -8,9 +8,10 @@ import { HomeContainerStyled, HomeSearchErrorMessage } from './styles/Home.style
 export default function Home() {
 	const [homeCards, setHomeCards] = useState([]);
 
-	async function setMarkers(markerIDs) {
+	async function setMarkers(markerIDs, completeSearch) {
 		const homeCards = await _getHomeCards(markerIDs);
 		setHomeCards(homeCards);
+		completeSearch();
 	}
 
 	async function _getHomeCards(markersByID) {

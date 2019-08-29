@@ -8,7 +8,6 @@ const {setupEnvironmentVariables} = require('./config/enviroment-setup');
 const errorMiddleware = require('./logic/middleware/error.middleware');
 
 setupEnvironmentVariables();
-console.log(process.env.LISTING_ENDPOINT);
 
 let app = express();
 const apiRouter = require('./routes/api/api.router');

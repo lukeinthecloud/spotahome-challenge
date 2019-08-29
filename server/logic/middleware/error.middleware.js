@@ -1,6 +1,7 @@
 module.exports = function errorHandler(err, req, res, next) {
-	res
-		.json({
-			error: err
-		});
+	console.error(err);
+
+	res.json({
+		message: 'There was a problem completing your request please try again...'
+	});
 };
