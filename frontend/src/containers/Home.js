@@ -25,9 +25,11 @@ export default function Home() {
 
 	return (
 		<>
-			<div className="container">
+			<div className="container mt-4">
 				<div className="row">
-					<SearchInput setMarkers={setMarkers}/>
+					<div className="col-sm-6">
+						<SearchInput setMarkers={setMarkers}/>
+					</div>
 				</div>
 			</div>
 

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
-import { get } from '../services/communication/communication.service';
+import { get }                        from '../services/communication/communication.service';
+import { FormStyled, InputBarStyled } from './styles/SearchInput.style';
 
 export default function MarkerSearch(props) {
 	const [marker, setMarker] = useState('');
 
-	async function getMarkers() {
+	async function getMarkers(e) {
+		e.preventDefault();
 		const result = await _getMarkersForLocation();
 		console.log(result);
 		props.setMarkers(result);
@@ -28,10 +30,10 @@ export default function MarkerSearch(props) {
 	}
 
 	return (
-		<>
-			<input type="text" onChange={updateMarkerInput} placeholder="Search.."/>
-			<button onClick={getMarkers} className="btn btn-secondary ml-2">Search</button>
-		</>
+		<FormStyled className="d-flex row">
+			<InputBarStyled type="text" onChange={updateMarkerInput} className="col-sm-8" placeholder="Search.."/>
+			<button onClick={getMarkers} className="btn btn-secondary ml-2 mb-0" type="submit">Search</button>
+		</FormStyled>
 	);
 }
 

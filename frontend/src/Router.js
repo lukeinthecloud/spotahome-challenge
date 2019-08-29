@@ -8,15 +8,15 @@ import MainNavigation     from './Components/MainNavigation';
 export default function AppRouter() {
 	return (
 		<Router>
-			<div className='container-fluid'>
+			<div className='container-fluid p-0'>
 				<MainNavigation/>
-				{
-					routes.map((route, index) => (
-							<RouteWithSubRoutes key={index} {...route} />
-						)
-					)
-				}
 			</div>
+			{
+				routes.map((route, index) => (
+						<RouteWithSubRoutes key={index} {...route} />
+					)
+				)
+			}
 		</Router>
 	);
 }
