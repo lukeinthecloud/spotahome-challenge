@@ -1,32 +1,32 @@
-import React                                   from 'react';
-import { CardContainer, ImageContainerStyled } from './styles/HomeCard.style';
+import React                                                          from 'react';
+import { CardContainerStyled, CardTitleStyled, ImageContainerStyled } from './styles/HomeCard.style';
 
 export default function HomeCard(props) {
 	const homeCard = props.homeCard;
 
 	return (
-		<CardContainer className="card">
+		<CardContainerStyled className="card">
 			<ImageContainerStyled>
 				<img src={homeCard.mainPhotoUrl}
 				     className="img-fluid" alt=""/>
 			</ImageContainerStyled>
 			<div className="card-body">
 				<div className="d-flex justify-content-between">
-					<p className="card-text">
+					<CardTitleStyled>
 						{homeCard.title}
-					</p>
-					<h2>
+					</CardTitleStyled>
+					<h3>
 						{homeCard.currencySymbol}
 						{homeCard.pricePerMonth}
-					</h2>
+					</h3>
 				</div>
 
 				<div className="col d-flex justify-content-end">
 					<a href="#" className="btn btn-primary">More Details</a>
-					<a href="#" className="btn btn-primary ml-1">Book Now</a>
+					<a href="#" className="btn btn-secondary ml-2">Book Now</a>
 				</div>
 			</div>
-		</CardContainer>
+		</CardContainerStyled>
 	);
 }
 

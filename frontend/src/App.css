@@ -1,0 +1,48 @@
+:root {
+	--sph-grey-white: #FFFFFF;
+	--sph-grey-black: #000000;
+
+	--sph-grey-primary: #343133;
+	--sph-grey-secondary: #A2A2A2;
+	--sph-grey-tertiary: #D2D2D2;
+
+	--sph-green-primary: #146A20;
+	--sph-green-secondary: #3D8F31;
+
+	--sph-yellow-primary: #FCD103;
+
+	--sph-orange-primary: #F09218;
+	--sph-orange-secondary: #aa620e;
+}
+
+body {
+	font-size: 16px;
+}
+
+.btn-primary,
+.btn-secondary{
+	padding: .5rem;
+	font-weight: bold;
+	border: 0;
+	border-bottom: 6px solid;
+}
+
+.btn-primary {
+	background: var(--sph-green-secondary);
+	border-bottom-color: var(--sph-green-primary);
+}
+
+.btn-primary:hover {
+	background: var(--sph-green-primary);
+	border-bottom-color: var(--sph-green-secondary);
+}
+
+.btn-secondary {
+	background: var(--sph-orange-primary);
+	border-bottom-color: var(--sph-orange-secondary);
+}
+
+.btn-secondary:hover {
+	background: var(--sph-orange-secondary);
+	border-bottom-color: var(--sph-orange-primary);
+}
