@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+export const CardContainer = styled.div`
+	align-items: center;
+	flex-direction: row !important; 
+	padding: 2rem;
+`;
+
 export const ImageContainerStyled = styled.div`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+	max-width: 200px;
 `;

@@ -5,10 +5,16 @@ const homeCardsHandler = require('../../logic/handlers/homecards.handler');
 const requestMiddleware = require('../../logic/middleware/request.middleware');
 
 router.post('/', [homeCardsHandler, requestMiddleware], (req, res) => {
-	res.json({
-		routeStructure: {
-			'/:id': 'Requires you to send a specific id for a room and will return relevant data to that room'
+	if (res.locals.data) {
+		res.locals.result = res.locals.data.homecards
+	} else {
+		res.locals.result = {
+			message: 'No Results Found for Homecards.'
 		}
+	}
+
+	res.json({
+		result: res.locals.result
 	});
 });
 
