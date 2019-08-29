@@ -10,6 +10,10 @@ This project is using the following:
     - React
     - Bootstrap
     
+## How to run locally 
+
+    - To install project execute 'npm install' in both the frontend and server folders respectively.
+    
 ## How to run locally
 
 You have one a few options:
