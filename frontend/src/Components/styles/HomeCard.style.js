@@ -4,12 +4,19 @@ export const CardTitleStyled = styled.h1`
 	font-size: 1.3rem;
 `;
 
+export const CardPriceStyled = styled.h3`
+    background: var(--sph-grey-black);
+    color: var(--sph-yellow-primary);
+    border-radius: 11rem;
+    font-size: 1rem;
+    padding: 10px;
+`;
+
 export const CardContainerStyled = styled.div`
-	border-color: var(--sph-grey-primary);
+	background: var(--sph-white);
+	border: .1rem solid var(--sph-grey-primary);
 	align-items: center;
 	padding: 2rem;
-	flex-direction: row !important; 
-	border-width: .1rem !important;
 `;
 
 export const ImageContainerStyled = styled.div`
