@@ -8,6 +8,7 @@ export const HomeContainerStyled = styled.div`
 `;
 
 export const HomeSearchErrorMessage = styled.div`
+	text-align: center;
 	justify-content: center;
     display: flex;
 `;

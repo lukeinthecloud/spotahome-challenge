@@ -1,5 +1,11 @@
 import React                                                                           from 'react';
-import { CardContainerStyled, CardPriceStyled, CardTitleStyled, ImageContainerStyled } from './styles/HomeCard.style';
+import {
+	CardContainerStyled,
+	CardDetailsContainerStyled,
+	CardPriceStyled,
+	CardTitleStyled,
+	ImageContainerStyled
+} from './styles/HomeCard.style';
 
 export default function HomeCard(props) {
 	const homeCard = props.homeCard;
@@ -11,7 +17,7 @@ export default function HomeCard(props) {
 				     className="img-fluid"/>
 			</ImageContainerStyled>
 			<div className="card-body">
-				<div className="col d-flex justify-content-between">
+				<CardDetailsContainerStyled className="col d-flex justify-content-between">
 					<CardTitleStyled>
 						{homeCard.title}
 					</CardTitleStyled>
@@ -19,11 +25,13 @@ export default function HomeCard(props) {
 						{homeCard.currencySymbol}
 						{homeCard.pricePerMonth}
 					</CardPriceStyled>
-				</div>
+				</CardDetailsContainerStyled>
 
-				<div className="col d-flex justify-content-end mt-5">
-					<a href="#" className="btn btn-primary">More Details</a>
-					<a href="#" className="btn btn-secondary ml-2">Book Now</a>
+				<div className="col flex-column  mt-5">
+					<div className="row d-flex justify-content-end">
+						<a href="#" className="col-lg-3 btn btn-primary">More Details</a>
+						<a href="#" className="col-lg-3 btn btn-secondary ml-2 d-none d-lg-block">Book Now</a>
+					</div>
 				</div>
 			</div>
 		</CardContainerStyled>

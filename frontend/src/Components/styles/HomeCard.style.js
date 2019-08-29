@@ -10,6 +10,13 @@ export const CardPriceStyled = styled.h3`
     border-radius: 11rem;
     font-size: 1rem;
     padding: 10px;
+    text-align: center;
+    
+    @media (max-width: 992px) {
+    	margin-top: 1.5rem;
+	    max-width: 5rem;
+	    align-self: flex-end;
+  	}
 `;
 
 export const CardContainerStyled = styled.div`
@@ -17,6 +24,16 @@ export const CardContainerStyled = styled.div`
 	border: .1rem solid var(--sph-grey-primary);
 	align-items: center;
 	padding: 2rem;
+	
+	@media (max-width: 992px) {
+    	justify-content: center;
+  	}
+`;
+
+export const CardDetailsContainerStyled = styled.div`
+	@media (max-width: 992px) {
+    	flex-direction: column;
+  	}
 `;
 
 export const ImageContainerStyled = styled.div`
