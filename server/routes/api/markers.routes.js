@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const requestService = require('../../logic/services/request.service');
+const markersHandler = require('../../logic/handlers/markers.handler');
+const requestMiddleware = require('../../logic/middleware/request.middleware');
+const filterServiceMiddleware = require('../../logic/middleware/filter.middleware');
 
 router.get('/', (req, res) => {
 	res.json({
@@ -11,19 +13,8 @@ router.get('/', (req, res) => {
 	});
 });
 
-router.get('/:country?&max=30', [requestService], async (req, res) => {
-	// const response = await User.find()
-	// 	.catch((err) => {
-	// 		console.error('Error unable to retrieve homecards: ', err);
-	// 		res
-	// 			.status(500)
-	// 			.json({
-	// 				path: '/homecards',
-	// 				message: 'Error in request'
-	// 			});
-	// 	});
-
-	await res.json({});
+router.get('/:country', [markersHandler, requestMiddleware, filterServiceMiddleware], async (req, res) => {
+	await res.json(res.locals.result);
 });
 
 module.exports = router;

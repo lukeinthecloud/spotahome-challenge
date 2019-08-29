@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const listingsRequestMiddleware = require('../../logic/services/request.service');
+const listingsRequestMiddleware = require('../../logic/middleware/request.middleware');
 
 router.get('/', (req, res) => {
+
+
 	res.json({
 		routeStructure: {
 			'/:id': 'Requires you to send a specific id for a room and will return relevant data to that room'

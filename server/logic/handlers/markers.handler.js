@@ -1,6 +1,9 @@
 module.exports = function markersHandler(req, res, next) {
 	req.locals = {
-		endpoint: '/markers'
+		endpoint: `/markers/${req.params.country}`,
+		limit: req.query.limit ? req.query.limit : 30
 	};
+
 	next();
 };
+
