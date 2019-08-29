@@ -1,8 +1,6 @@
 import React from 'react';
 
 export default function Room() {
-
-	console.log('hit');
 	return (
 		<div className="container mt-4">
 			<div className="row">

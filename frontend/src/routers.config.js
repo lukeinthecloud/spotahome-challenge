@@ -30,14 +30,13 @@ export const routes = [
 		requiresAuthentication: true,
 		routes: [
 			{
+				path: '/rooms/:id/booking',
+				component: Booking
+			},
+			{
 				path: '/rooms/:id',
 				component: Room
 			},
-			{
-				path: '/rooms/booking',
-				isExact: true,
-				component: Booking
-			}
 		]
 	}
 ];
