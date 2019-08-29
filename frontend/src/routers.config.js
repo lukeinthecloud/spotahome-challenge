@@ -1,7 +1,9 @@
 import About     from './containers/About';
+import Booking   from './containers/Booking';
 import Contact   from './containers/Contact';
 import Home      from './containers/Home';
 import HowWeWork from './containers/HowWeWork';
+import Room      from './containers/Room';
 
 export const routes = [
 	{
@@ -20,5 +22,22 @@ export const routes = [
 	{
 		path: '/contact',
 		component: Contact
+	},
+	{
+		path: '/rooms',
+		component: Home,
+		isExact: true,
+		requiresAuthentication: true,
+		routes: [
+			{
+				path: '/rooms/:id',
+				component: Room
+			},
+			{
+				path: '/rooms/booking',
+				isExact: true,
+				component: Booking
+			}
+		]
 	}
 ];
