@@ -36,7 +36,7 @@ export const routes = [
 			{
 				path: '/rooms/:id',
 				component: Room
-			},
+			}
 		]
 	}
 ];
