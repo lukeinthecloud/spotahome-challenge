@@ -35,6 +35,9 @@ You have one a few options:
     This also abstracts complex logic into middleware and keeps the route itself more clean and is just responsible
     for passing the result down.
 
+    There is also on the markers endpoint the option to pass in a query param for limit. This I have just set for 30 but
+    is overidable in the request just so it does not have to loop over all 4000+ items when mapping.
+    
 ### Frontend
     I have only used new React Hooks, there is not much state managment needed
     however for what there is these have been handled as such.

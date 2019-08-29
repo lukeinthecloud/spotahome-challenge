@@ -15,12 +15,16 @@ function _mapOutRoomData(req, roomList) {
 
 
 module.exports = function markersFilterServiceMiddleware(req, res, next) {
-	const roomList = [];
+	let roomList = [];
 
 	// Note: using standard for loop as to not iterate over all items
-	for (let i = 0; i < req.locals.limit; i++) {
-		const item = res.locals.data[i];
-		roomList.push(item);
+	if (req.locals.limit) {
+		for (let i = 0; i < req.locals.limit; i++) {
+			const item = res.locals.data[i];
+			roomList.push(item);
+		}
+	} else {
+		roomList = [...res.locals.data];
 	}
 
 	const result = _mapOutRoomData(req, roomList);
