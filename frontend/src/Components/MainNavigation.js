@@ -17,10 +17,10 @@ export default function MainNavigation() {
 						<Link className="nav-link active" to="/about">The Company</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link active" to="/about">How We Work</Link>
+						<Link className="nav-link active" to="/how-we-work">How We Work</Link>
 					</li>
 					<li className="nav-item">
-						<Link className="nav-link active" to="/about">Contact Us</Link>
+						<Link className="nav-link active" to="/contact">Contact Us</Link>
 					</li>
 				</ul>
 			</div>
